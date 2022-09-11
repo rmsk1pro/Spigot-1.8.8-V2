@@ -1,0 +1,83 @@
+From a0ed76ccd9812dba94b60e059537e7757fd5562d Mon Sep 17 00:00:00 2001
+From: BuildTools <unconfigured@null.spigotmc.org>
+Date: Wed, 5 Jan 2022 19:41:18 -0300
+Subject: [PATCH] Bukkit
+
+
+diff --git a/src/main/java/org/bukkit/Bukkit.java b/src/main/java/org/bukkit/Bukkit.java
+index 584fe113..c60fe163 100644
+--- a/src/main/java/org/bukkit/Bukkit.java
++++ b/src/main/java/org/bukkit/Bukkit.java
+@@ -75,7 +75,7 @@ public final class Bukkit {
+         }
+ 
+         Bukkit.server = server;
+-        server.getLogger().info("This server is running " + getName() + " version " + getVersion() + " (Implementing API version " + getBukkitVersion() + ")");
++        server.getLogger().info("Este servidor esta executando versao spigot-TrDSTYLEE");
+     }
+ 
+     /**
+@@ -207,7 +207,7 @@ public final class Bukkit {
+     public static String getServerId() {
+         return server.getServerId();
+     }
+-    
++
+     /**
+      * Get world type (level-type setting) for default world.
+      *
+@@ -561,7 +561,7 @@ public final class Bukkit {
+     public static void savePlayers() {
+         server.savePlayers();
+     }
+-    
++
+     /**
+      * Dispatches a command on this server, and executes it if found.
+      *
+@@ -630,7 +630,7 @@ public final class Bukkit {
+     public static void resetRecipes() {
+         server.resetRecipes();
+     }
+-    
++
+     /**
+      * Gets a list of command aliases defined in the server properties.
+      *
+@@ -703,7 +703,7 @@ public final class Bukkit {
+     public static boolean useExactLoginLocation() {
+         return server.useExactLoginLocation();
+     }
+- 
++
+     /**
+      * Shutdowns the server, stopping everything.
+      */
+@@ -967,7 +967,7 @@ public final class Bukkit {
+     public static int getWaterAnimalSpawnLimit() {
+         return server.getWaterAnimalSpawnLimit();
+     }
+-    
++
+     /**
+      * Gets user-specified limit for number of ambient mobs that can spawn in
+      * a chunk.
+@@ -1111,12 +1111,12 @@ public final class Bukkit {
+ 
+     /**
+      * Create a ChunkData for use in a generator.
+-     * 
++     *
+      * See {@link ChunkGenerator#generateChunkData(org.bukkit.World, java.util.Random, int, int, org.bukkit.generator.ChunkGenerator.BiomeGrid)}
+-     * 
++     *
+      * @param world the world to create the ChunkData for
+      * @return a new ChunkData for the world
+-     * 
++     *
+      */
+     public static ChunkGenerator.ChunkData createChunkData(World world) {
+         return server.createChunkData(world);
+-- 
+2.37.1.windows.1
+

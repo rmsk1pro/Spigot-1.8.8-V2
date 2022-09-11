@@ -1,0 +1,21 @@
+From a44005b255ef3eed61115ed8fda7c1f2a30be4a7 Mon Sep 17 00:00:00 2001
+From: BuildTools <unconfigured@null.spigotmc.org>
+Date: Sat, 30 Jul 2022 09:29:07 -0300
+Subject: [PATCH] TicksPerSecondCommand
+
+
+diff --git a/src/main/java/org/spigotmc/TicksPerSecondCommand.java b/src/main/java/org/spigotmc/TicksPerSecondCommand.java
+index f9b857d2..a7e5c60c 100644
+--- a/src/main/java/org/spigotmc/TicksPerSecondCommand.java
++++ b/src/main/java/org/spigotmc/TicksPerSecondCommand.java
+@@ -56,6 +56,7 @@ public class TicksPerSecondCommand extends Command
+         sender.sendMessage("§b■ §f Versão: §a" + Bukkit.getBukkitVersion());
+         sender.sendMessage("§b■ §f Processadores CPU: §a" + Runtime.getRuntime().availableProcessors());
+         sender.sendMessage("§b■ §f Sistema operacional: §3" + System.getProperty("os.name"));
++        sender.sendMessage("§b■ §f Load Average: §a" + String.valueOf(ManagementFactory.getOperatingSystemMXBean().getSystemLoadAverage()));
+         sender.sendMessage("");
+         StringBuilder sb = new StringBuilder("§b■  §fTPS:§a " );
+         for ( double tps : MinecraftServer.getServer().recentTps ) {
+-- 
+2.37.1.windows.1
+

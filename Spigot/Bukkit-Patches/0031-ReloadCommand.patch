@@ -1,0 +1,36 @@
+From 82075f045fb6608d215bc84041d0901bdb9048fb Mon Sep 17 00:00:00 2001
+From: BuildTools <unconfigured@null.spigotmc.org>
+Date: Wed, 5 Jan 2022 19:41:50 -0300
+Subject: [PATCH] ReloadCommand
+
+
+diff --git a/src/main/java/org/bukkit/command/defaults/ReloadCommand.java b/src/main/java/org/bukkit/command/defaults/ReloadCommand.java
+index c70d5129..df0a88d9 100644
+--- a/src/main/java/org/bukkit/command/defaults/ReloadCommand.java
++++ b/src/main/java/org/bukkit/command/defaults/ReloadCommand.java
+@@ -10,7 +10,7 @@ import org.bukkit.command.CommandSender;
+ public class ReloadCommand extends BukkitCommand {
+     public ReloadCommand(String name) {
+         super(name);
+-        this.description = "Reloads the server configuration and plugins";
++        this.description = "Recarrega a configuração do servidor e plugins";
+         this.usageMessage = "/reload";
+         this.setPermission("bukkit.command.reload");
+         this.setAliases(Arrays.asList("rl"));
+@@ -20,10 +20,10 @@ public class ReloadCommand extends BukkitCommand {
+     public boolean execute(CommandSender sender, String currentAlias, String[] args) {
+         if (!testPermission(sender)) return true;
+ 
+-        Command.broadcastCommandMessage(sender, ChatColor.RED + "Please note that this command is not supported and may cause issues when using some plugins.");
+-        Command.broadcastCommandMessage(sender, ChatColor.RED + "If you encounter any issues please use the /stop command to restart your server.");
++        Command.broadcastCommandMessage(sender, ChatColor.RED + "Esse comando pode ocorrer bugs nos seus plugins.");
++        Command.broadcastCommandMessage(sender, ChatColor.RED + "Qualquer erro use /stop...");
+         Bukkit.reload();
+-        Command.broadcastCommandMessage(sender, ChatColor.GREEN + "Reload complete.");
++        Command.broadcastCommandMessage(sender, ChatColor.GREEN + "Reload completado.");
+ 
+         return true;
+     }
+-- 
+2.37.1.windows.1
+
